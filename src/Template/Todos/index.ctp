@@ -10,7 +10,7 @@
             <?= $this->Html->link($one->title, ['action' => 'view', $one->id]) ?>
         </td>
         <td>
-            <?= $one->created->format(DATE_RFC850) ?>
+            <?= $one->created->i18nFormat(); ?>
         </td>
     </tr>
     <?php endforeach; ?>
