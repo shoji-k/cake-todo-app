@@ -24,4 +24,10 @@ class TodosController extends AppController
         }
         $this->set('todo', $todo);
     }
+
+    public function view($id)
+    {
+        $todo = $this->Todos->get($id); // throw NotFoundException
+        $this->set(compact('todo'));
+    }
 }
