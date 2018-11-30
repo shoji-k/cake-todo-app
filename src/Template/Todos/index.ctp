@@ -1,4 +1,5 @@
 <h1>List</h1>
+<?= $this->Html->link('追加', ['action' => 'add']) ?>
 <table>
     <tr>
         <th>タイトル</th>
