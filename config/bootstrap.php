@@ -88,6 +88,14 @@ if (Configure::read('debug')) {
     Configure::write('Cache._cake_core_.duration', '+2 minutes');
     // disable router cache during development
     Configure::write('Cache._cake_routes_.duration', '+2 seconds');
+    
+    Configure::write('DebugKit.panels', ['DebugKit.Packages' => false]);
+    Configure::write('DebugKit.forceEnable', true);
+}
+
+// https://stackoverflow.com/questions/18805437/cakephp-absolute-urls-for-loginaction
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
 }
 
 /*
