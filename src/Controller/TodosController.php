@@ -30,4 +30,18 @@ class TodosController extends AppController
         $todo = $this->Todos->get($id); // throw NotFoundException
         $this->set(compact('todo'));
     }
+    
+    public function edit($id)
+    {
+        $todo = $this->Todos->get($id); // throw NotFoundException
+        if ($this->request->is(['post', 'put'])) {
+            $this->Todos->patchEntity($todo, $this->request->getData());
+            if ($this->Todos->save($todo)) {
+                $this->Flash->success(__('Your todo has been updated.'));
+                return $this->redirect(['action' => 'index']);
+            }
+            $this->Flash->error(__('Unable to update your todo.'));
+        }
+        $this->set(compact('todo'));
+    }
 }
