@@ -5,8 +5,7 @@ class TodosController extends AppController
 {
     public function index()
     {
-        $this->loadComponent('Paginator');
-        $todos = $this->Paginator->paginate($this->Todos->find());
+        $todos = $this->Todos->find();
         $this->set(compact('todos'));
     }
 
