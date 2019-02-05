@@ -43,4 +43,15 @@ class TodosController extends AppController
         }
         $this->set(compact('todo'));
     }
+    
+    public function delete($id)
+    {
+        $this->request->allowMethod(['post', 'delete']);
+    
+        $todo = $this->Todos->get($id);
+        if ($this->Todos->delete($todo)) {
+            $this->Flash->success(__('The {0} todo has been deleted.', $todo->title));
+            return $this->redirect(['action' => 'index']);
+        }
+    }
 }
