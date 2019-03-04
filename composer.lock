@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3a0e3b91eb5a64e8144282ca930555d9",
+    "content-hash": "10d0065c1fc25ede02f144a53a857e24",
     "packages": [
         {
             "name": "aura/intl",
@@ -1421,16 +1421,16 @@
         },
         {
             "name": "cakephp/debug_kit",
-            "version": "3.17.0",
+            "version": "3.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "6a9023ecc4ac0983c184cedf8e6142ab8ea4a3ff"
+                "reference": "b850256dd6a15af21f02c188b9ca9a4c8e197c79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/6a9023ecc4ac0983c184cedf8e6142ab8ea4a3ff",
-                "reference": "6a9023ecc4ac0983c184cedf8e6142ab8ea4a3ff",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/b850256dd6a15af21f02c188b9ca9a4c8e197c79",
+                "reference": "b850256dd6a15af21f02c188b9ca9a4c8e197c79",
                 "shasum": ""
             },
             "require": {
@@ -1477,7 +1477,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2018-12-02T03:27:26+00:00"
+            "time": "2019-03-04T08:57:16+00:00"
         },
         {
             "name": "composer/ca-bundle",
